@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD com Python</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="col-8 m-auto pt-2 pb-2 text-center">
+    <h1>ENCURTADOR</h1>
+</div>
+
+
+<div class="col-8 m-auto pt-4 pb-2 text-center shadow-lg">
+    <h2>Cole a URL para ser encurtada</h2>
+    <div class="col-8 m-auto pt-3 pb-2 text-justify">
+        <form name="form" id="form" action="/create/" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <label class="col col-lg-2">Código</label>
+                <div class="form-group mb-3 col">{{form.codigo}}</div>
+            </div>
+
+            <div class="row">
+                <label class="col col-lg-2">URL</label>
+                <div class="form-group mb-3 col">{{form.url}}</div>
+            </div>
+
+            <input type="submit"  value="encurtar" class="mt-2 btn btn-sm btn-outline-primary col col-lg-2 "/>
+
+        </form>
+    </div>
+    <small class="mt-4 text-muted">O Encurtador de URL permite diminuir um link longo tornando-o fácil de lembrar
+        Após encurtar a URL</small>
+</div>
+</div>
+
+
+</body>
+</html>
